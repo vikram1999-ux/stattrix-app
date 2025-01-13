@@ -1,8 +1,11 @@
 import React from "react";
 import Logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
+import PasswordToggle from "../components/PasswordToggle";
+
 
 const Signup = () => {
+  
 
   return (
     <>
@@ -21,6 +24,15 @@ const Signup = () => {
             <div className="row row-cols-2 align-items-center">
               <div className="col">
                 <form>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputName1" className="form-label" aria-required="true">Name</label>
+                    <input
+                      type="name"
+                      className="form-control"
+                      id="exampleInputName1"
+                      placeholder="Enter your name"
+                    />
+                  </div>
                   <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label" aria-required="true">Email Address</label>
                     <input
@@ -31,24 +43,7 @@ const Signup = () => {
                       placeholder="Enter your email address"
                     />
                   </div>
-                  <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Enter your password"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="exampleInputPassword2" className="form-label">Confirm Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="exampleInputPassword2"
-                      placeholder="Re-enter your password"
-                    />
-                  </div>
+                  <PasswordToggle />
                   <div className="mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                     <label

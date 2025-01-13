@@ -22,7 +22,8 @@ ul{
   --theme-color-success: #00adb5;
   --theme-color-light: #fff;
   --theme-color-light-x: #f5f5f5;
-  --font-color: #333333;
+  --font-color: #333333; 
+  --theme-color-grey: #f7fafc;
 }
 .custom-btn {
 font-size: 14px;
@@ -68,11 +69,21 @@ a {
     .header-logo{
       padding: 25px;
     }
-    ul{
+    ul.custom-parent{
       list-style: none;
       padding: 25px;
-      li{
-        padding: 13px;
+      &>li{
+        cursor: pointer;
+        border-radius: 10px;
+        &:not(:last-child){
+          margin-bottom: 15px;
+        }
+        &:hover{
+          background-color: var(--theme-color-success) !important;
+          a{
+            color: var(--theme-color-light) !important;
+          }
+        }
       }
     }
   }

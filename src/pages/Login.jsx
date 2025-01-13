@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
+import PasswordToggle from "../components/PasswordToggle";
 
 const Login = () => {
 
@@ -31,15 +32,7 @@ const Login = () => {
                       placeholder="Enter your email address"
                     />
                   </div>
-                  <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Enter your password"
-                    />
-                  </div>
+                  <PasswordToggle />
                   <div className="mb-3 form-check d-flex justify-content-between">
                     <span>
                       <input type="checkbox" className="form-check-input" id="exampleCheck1" />
